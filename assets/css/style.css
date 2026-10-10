@@ -1888,3 +1888,7 @@ html[dir="rtl"] .form {
 .faq1 {
   color: black !important;
 }
+
+/* Navigation: no active-page green text or underline */
+.main-nav a[aria-current="page"], .main-nav a.active, .main-nav a.is-active { color:inherit !important; border-bottom-color:transparent !important; box-shadow:none !important; text-decoration:none !important; }
+.main-nav a[aria-current="page"]::after, .main-nav a.active::after, .main-nav a.is-active::after {display:none !important;content:none !important;}
