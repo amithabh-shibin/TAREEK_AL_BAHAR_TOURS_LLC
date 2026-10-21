@@ -34,6 +34,7 @@
     updateLanguageUi(localStorage.getItem("siteLanguage") || "en");
   }
   document.addEventListener("componentsLoaded", initHeaderControls);
+  initHeaderControls();
 
   // Enquiry forms: no backend yet, so hand the enquiry over to WhatsApp.
   // Replace the data-whatsapp number (or the whole handler) when the site moves to WordPress.

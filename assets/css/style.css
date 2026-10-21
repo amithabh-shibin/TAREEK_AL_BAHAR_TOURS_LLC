@@ -1892,3 +1892,7 @@ html[dir="rtl"] .form {
 /* Navigation: no active-page green text or underline */
 .main-nav a[aria-current="page"], .main-nav a.active, .main-nav a.is-active { color:inherit !important; border-bottom-color:transparent !important; box-shadow:none !important; text-decoration:none !important; }
 .main-nav a[aria-current="page"]::after, .main-nav a.active::after, .main-nav a.is-active::after {display:none !important;content:none !important;}
+
+/* Explicit desktop and mobile navigation states. */
+@media(min-width:1181px){.site-header .main-nav{display:block;position:static;background:transparent;box-shadow:none;padding:0}.site-header .main-nav__list{flex-direction:row}.site-header .nav-toggle{display:none}}
+@media(max-width:1180px){.site-header .nav-toggle{display:block;flex-shrink:0}.site-header .main-nav{z-index:1000}.site-header .main-nav.is-open{display:block}.site-header .main-nav__list{display:flex;flex-direction:column;align-items:stretch}.site-header .main-nav a{display:block;white-space:normal}.site-header .header-cta .btn{display:none}}
