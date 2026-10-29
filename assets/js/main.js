@@ -110,6 +110,12 @@
 
   function updateLanguageUi(lang) {
     document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+    document.querySelectorAll(".lang-option").forEach(function (button) {
+      var code = button.getAttribute("data-lang");
+      var active = code === lang || (code === "zh" && lang === "zh-CN");
+      button.classList.toggle("is-active", active);
+      button.setAttribute("aria-pressed", active ? "true" : "false");
+    });
     var label = document.querySelector(".lang-btn span");
     if (label) label.textContent = lang === "zh-CN" ? "中文" : lang === "ar" ? "عربي" : "EN";
   }
