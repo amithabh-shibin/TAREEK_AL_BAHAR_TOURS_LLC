@@ -1932,3 +1932,9 @@ html[dir="rtl"] .form {
   background: #12255a;
   box-shadow: var(--shadow);
 }
+
+.split__media--video .split__badge {
+  position: static;
+  display: inline-block;
+  margin-top: 14px;
+}
